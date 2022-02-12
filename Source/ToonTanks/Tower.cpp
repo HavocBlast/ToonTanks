@@ -20,11 +20,12 @@ void ATower::Tick(float DeltaTime)
 		{
 			// If in range then rotate turret to tank
 			RotateTurret(Tank->GetActorLocation());
-		}
 
-		
+			// Fire
+
+			
+		}
 	}
-	
 }
 
 void ATower::BeginPlay()
