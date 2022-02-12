@@ -27,8 +27,5 @@ void AProjectile::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	FVector DeltaLocation = FVector::ZeroVector;
-	DeltaLocation.X = Speed * UGameplayStatics::GetWorldDeltaSeconds(this);
-	AddActorLocalOffset(DeltaLocation, true);
 }
 
