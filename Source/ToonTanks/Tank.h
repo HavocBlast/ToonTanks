@@ -17,6 +17,8 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+protected:
+	void ABasePawn();
 
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
@@ -33,6 +35,8 @@ private:
 
 	void Move(float Value);
 	void Turn(float Value);
+
+	APlayerController* PlayerControllerRef;
 };
 
 
