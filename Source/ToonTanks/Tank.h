@@ -17,8 +17,11 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
 protected:
-	void ABasePawn();
+	virtual void BeginPlay() override;
 
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
@@ -33,8 +36,8 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 		float TurnRate = 45.f;
 
-	void Move(float Value);
-	void Turn(float Value);
+	void Move(float const Value);
+	void Turn(float const Value);
 
 	APlayerController* PlayerControllerRef;
 };
