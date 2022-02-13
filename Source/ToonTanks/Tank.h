@@ -20,6 +20,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void HandleDestruction();
+
+	APlayerController* GetTankPlayerController() const {return TankPlayerController; }
+
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -39,7 +44,7 @@ private:
 	void Move(float const Value);
 	void Turn(float const Value);
 
-	APlayerController* PlayerControllerRef;
+	APlayerController* TankPlayerController;
 };
 
 
