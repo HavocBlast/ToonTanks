@@ -19,6 +19,11 @@ void ATower::HandleDestruction()
 {
 	Super::HandleDestruction();
 
+	if(DeathParticles)
+	{
+		UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticles, GetActorLocation(), GetActorRotation());
+	}
+
 	Destroy();
 }
 

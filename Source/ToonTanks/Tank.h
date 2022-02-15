@@ -45,6 +45,9 @@ private:
 	void Turn(float const Value);
 
 	APlayerController* TankPlayerController;
+
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	UParticleSystem* DeathParticles;
 };
 
 

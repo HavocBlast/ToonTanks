@@ -34,4 +34,7 @@ private:
 
 	void CheckFireCondition();
 	bool InFireRange(float Range) const;
+
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	UParticleSystem* DeathParticles;
 };

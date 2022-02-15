@@ -58,6 +58,12 @@ void ATank::HandleDestruction()
 
 	SetActorHiddenInGame(true);
 	SetActorTickEnabled(false);
+
+	if(DeathParticles)
+	{
+		UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticles, GetActorLocation(), GetActorRotation());
+	}
+
 }
 
 void ATank::BeginPlay()
